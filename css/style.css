@@ -66,15 +66,28 @@ svg{
     cursor: pointer;
 }
 
-.wrap{
+.main-wrap{
     width: 90%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .mcon__head{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.mcon__txt{
+    line-height: 1.5rem;
+}
+
+.mcon__list{
+    list-style: square;
+    list-style-position: inside;
+}
+
+.mcon__item{
+    margin: 10px 0;
 }
 
 /* PC版メディアクエリー */
