@@ -7,16 +7,74 @@ html{
     -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+
+}
+
+svg{
+
+}
+
+/*global*/
 .wrap {
   width: 100%;
 }
 
-h3 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 165%;
-  text-align: center;
-  padding: 80px 0 0 0;
+.mvis{
+    height: 100vh;
+}
+
+.mvis__head-wrap{
+    background: white;
+    padding: 50px 0;
+    height: calc(80% - 100px);
+}
+
+.mvis__head{
+    font-size: 6rem;
+    font-weight: 700;
+
+    user-select: none;
+}
+
+.mvis__btn-wrap{
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 50px;
+/*    height: calc(20% - 100px);*/
+}
+
+.mvis__btn{
+    padding: 20px 50px;
+
+    background: white;
+    border: none;
+
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.wrap{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mcon__head{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* PC版メディアクエリー */
