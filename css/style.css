@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.wrap {
+  width: 100%;
+}
+
 h3 {
   font-size: 18px;
   font-weight: bold;
@@ -8,21 +12,17 @@ h3 {
   padding: 80px 0 0 0;
 }
 
-.wrap {
-  width: 100%;
-}
-
 /* PC版メディアクエリー */
 /*画面サイズが1024px以上のとき*/
 @media screen and (min-width:1024px) {
   .left {
-    width: calc((100% - 450px) * 0.65);
-    /* ブラウザ幅（100%）からメインコンテンツの幅（450px）を引いた数値の65%幅という計算*/
+    width: calc((100% - 450px) / 2);
+    /* ブラウザ幅（100%）からメインコンテンツの幅（450px）を引いた数値の2分の1幅という計算  */
     height: 100vh;
 
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     /* 左カラムを左上に固定配置 */
 
     overflow: hidden;
@@ -31,7 +31,6 @@ h3 {
   このボックス内にpositionで配置した要素がブラウザウインドウ外にはみ出たときに、横スクロールバーが出ない
   書いておくと良い。
   */
-
     background-image: url(../images/yasai.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,8 +38,7 @@ h3 {
   }
 
   .right {
-    width: calc((100% - 450px) * 0.35);
-    /* ブラウザ幅（100%）からメインコンテンツの幅（450px）を引いた数値の35%幅という計算 */
+    width: calc((100% - 450px) / 2);
     height: 100vh;
 
     position: fixed;
@@ -54,69 +52,78 @@ h3 {
   このボックス内にpositionで配置した要素がブラウザウインドウ外にはみ出たときに、横スクロールバーが出ない
   書いておくと良い。
   */
-
     background-image: url(../images/retasu.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
+
   .center {
     width: 450px;
     background: linear-gradient(to bottom, #FFC778, #FFF, #c4ff80, #5cab02);
+
     height: 5000px;
     /* 擬似的にメインコンテンツに高さを出しているだけ。実際のサイト制作では高さは記述しない */
 
     position: absolute;
     top: 0;
-    left: calc((100% - 450px) * 0.65);
-    /* メインコンテンツの左端からの距離を、左カラムの幅（65%）と同じにする計算 */
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*
+  positionで要素を中央配置するときは、
+  left: 0;
+  right: 0;
+  margin: auto;と記述する
+  */
   }
 }
-
 
 /* タブレット版メディアクエリー */
 /*画面サイズが481px以上1024px未満のとき
 両サイドのカラムに共通の背景画像が表示される
 */
 @media screen and (min-width:481px) and (max-width:1023px) {
+
+  .wrap {
+    width: 100%;
+    background-image: url(../images/yasai.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+  }
+
+  .left {
+    display: none;
+  }
+
   .right {
     display: none;
   }
 
   .center {
     width: 450px;
-    background: linear-gradient(to bottom, #FFC778, #FFF, #c4ff80, #5cab02);
-
     height: 5000px;
     /* 擬似的にメインコンテンツに高さを出しているだけ。実際のサイト制作では高さは記述しない */
 
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+    background: linear-gradient(to bottom, #FFC778, #FFF, #c4ff80, #5cab02);
 
-  .left {
-    width: calc(100% - 450px);
-    /* ブラウザ幅（100%）からメインコンテンツの幅（450px）を引いた数値の65%幅という計算*/
-    height: 100vh;
+    margin: 0 auto;
 
-    position: fixed;
+    /* position: absolute;
     top: 0;
     left: 0;
-    /* 左カラムを左上に固定配置 */
+    right: 0;
+    margin: auto; */
 
-    overflow: hidden;
     /*
-  overflow: hidden; はみ出した領域を隠す
-  このボックス内にpositionで配置した要素がブラウザウインドウ外にはみ出たときに、横スクロールバーが出ない
-  書いておくと良い。
+  positionで要素を中央配置するときは、
+  left: 0;
+  right: 0;
+  margin: auto;と記述する
   */
-
-    background-image: url(../images/yasai.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
   }
 }
 
