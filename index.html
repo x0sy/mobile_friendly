@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>自作キーボードを作ろう！</title>
   <link href="css/reset.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -17,6 +17,7 @@
                 <li class="gnav__item"><a href="#about" class="gnav__link">about</a></li>
                 <li class="gnav__item"><a href="#merit" class="gnav__link">merits</a></li>
                 <li class="gnav__item"><a href="#parts" class="gnav__link">parts</a></li>
+                <li class="gnav__item"><a href="#contact" class="gnav__link">contact</a></li>
             </ul>
             <ul class="sns-bar">
                 <li class="sns-bar__item"><a href="#z" class="sns-bar__link"><svg xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 448 512" class="sns-bar__icon"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
@@ -121,6 +122,32 @@
                     </a></div>
                  </article>
             </div>
+            <div class="main-wrap" id="contact">
+                <div class="mcon__head--wrap">
+                    <h2 class="mcon__head">
+                        <span>お問い合わせ</span>
+                        <span>お問い合わせ</span>
+                        <span>お問い合わせ</span>
+                    </h2>
+                    <h2 class="mcon__head">
+                        <span>お問い合わせ</span>
+                        <span>お問い合わせ</span>
+                        <span>お問い合わせ</span>
+                    </h2>
+                </div>
+                 <article class="mcon__article">
+                     <h3 class="mcon__subhead"><span class="highlight--subhead">Contact Us</span></h3>
+                     <form action="" id="contact-form">
+                        <p class="form__label">Name</p>
+                         <input type="text" id="name">
+                         <p class="form__label">Email</p>
+                         <input type="text" id="email">
+                         <p class="form__label">Message</p>
+                         <textarea name="" id="comment" cols="30" rows="10"></textarea>
+                         <input type="submit" id="submitbtn">
+                     </form>
+                 </article>
+            </div>
         </div>
         <div class="center__wrap"></div>
     <footer class="footer">
@@ -129,7 +156,27 @@
     </main>
     <div class="right"></div>
   </div>
+    <script>
+        var formObj = document.getElementById("contact-form");
+        var inputName = document.getElementById("name");
+        var sbmtBtn = document.getElementById("submitbtn");
+        var telString = document.getElementById("email");
+        var msg = document.getElementById("comment");
 
+        formObj.addEventListener("submit", function(event){
+                if(inputName.value == ""){
+                    alert("名前は必要。");
+                    event.preventDefault();
+                } else if(telString.value == ""){
+                    alert("emailは必要。");
+                    event.preventDefault();
+                } else if(msg.value == ""){
+                    alert("お問い合わせ内容は必要。");
+                    event.preventDefault();
+                }
+                event.preventDefault();
+             })
+    </script>
 </body>
 
 </html>

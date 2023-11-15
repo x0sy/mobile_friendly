@@ -31,7 +31,7 @@ svg{
 }
 
 .mvis__head-wrap{
-    height: calc(80vh - 10%);
+    height: calc(80vh - 5%);
 }
 
 .mvis__head{
@@ -88,7 +88,7 @@ svg{
     margin: 50px auto;
     padding: 0 10px;
 
-    scroll-margin: -50px;
+
 
     overflow: hidden;
 }
@@ -175,6 +175,34 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+
+    line-height: 2rem;
+}
+
+#submitbtn{
+    margin-top: 15px;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+
+    background: #90A68F;
+    border: none;
+}
+
+#name, #email, #message{
+    padding: 5px;
+}
+
+.form__label{
+    font-weight: 700;
 }
 
 /* PC版メディアクエリー */
@@ -377,7 +405,7 @@ svg{
         flex-direction: column;
 
         padding: 10px 0;
-        height: 25%;
+        height: 30%;
         width: 90%;
 
         position: relative;
@@ -391,7 +419,7 @@ svg{
     }
 
     .header__logo{
-        width: 60%;
+        width: 40%;
     }
 
     .gnav{
