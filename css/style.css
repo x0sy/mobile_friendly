@@ -21,7 +21,7 @@ a, a:visited{
 }
 
 svg{
-    fill: #eee;
+    fill: #fff;
 }
 
 /*global*/
@@ -66,7 +66,7 @@ svg{
     background: #90A68F;
     border: none;
 
-    color: #eee;
+    color: #fff;
     font-size: 1.2rem;
     letter-spacing: .2rem;
     text-transform: uppercase;
@@ -130,12 +130,6 @@ svg{
 .highlight--subhead{
     background: #FFFF64;
     padding: 3px 1px;
-
-/*
-    transform-origin: left;
-    transform: scale(0);
-    transition: transform 200ms ease-in-out;
-*/
 }
 
 .mcon__txt{
